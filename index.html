@@ -10,6 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-text">
+                <h1 class="loading-congrats">Congratulations!</h1>
+                <h2 class="loading-school">Arise Champion Tae<br>Kwon Do</h2>
+                <p class="loading-rank">is ranked #1 in<br>Riverside County</p>
+            </div>
+            <div class="loading-awards">
+                <div class="loading-award-large">
+                    <img src="award.jpg" alt="Award - Ranked #1 in Riverside County" class="award-image">
+                </div>
+            </div>
+            <div class="loading-progress">
+                <div class="loading-progress-bar">
+                    <div class="loading-progress-fill"></div>
+                </div>
+                <div class="loading-percentage">0%</div>
+            </div>
+            <div class="loading-indicator">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+            </div>
+            <div class="loading-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -43,14 +77,62 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="about-image">
-            <div class="about-overlay"></div>
-            <div class="about-content">
-                <p class="about-line">Discipline</p>
-                <p class="about-line">Confidence</p>
-                <p class="about-line">Community</p>
+
+    <!-- Academy Intro Section -->
+    <section id="about" class="section academy-intro">
+        <div class="academy-intro-image">
+            <div class="academy-overlay"></div>
+            <div class="container">
+                <div class="academy-intro-content">
+                    <h2 class="academy-headline">Elevate Your Game at Arise Taekwondo</h2>
+                    <div class="academy-features">
+                        <div class="academy-feature">
+                            <strong>Traditional Excellence</strong> — Master the core fundamentals of Taekwondo
+                        </div>
+                        <div class="academy-feature">
+                            <strong>Olympic-Style Sparring</strong> — Train with a competitive edge using world-class techniques
+                        </div>
+                        <div class="academy-feature">
+                            <strong>Unstoppable Confidence</strong> — Build mental and physical strength through disciplined training
+                        </div>
+                    </div>
+                    <p class="academy-closing">Ready to arise? Join us on the mat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Children & Youth Programs Section -->
+    <section class="section youth-programs">
+        <div class="youth-programs-image">
+            <div class="youth-overlay"></div>
+            <div class="container">
+                <div class="youth-programs-content">
+                    <h2 class="youth-headline">Give Your Child the "Leadership Edge" at Arise Taekwondo</h2>
+                    <p class="youth-intro">Looking for more than just an after-school activity? At Arise Taekwondo, we help students build discipline, confidence, and leadership skills that carry into everyday life.</p>
+                    
+                    <h3 class="youth-subheading">The Arise Difference</h3>
+                    
+                    <div class="youth-features">
+                        <div class="youth-feature">
+                            <strong>More Than Just Kicking</strong> — Focus on discipline, respect, and leadership
+                        </div>
+                        <div class="youth-feature">
+                            <strong>Action-Packed Training</strong> — High-energy, structured classes for kids and adults
+                        </div>
+                        <div class="youth-feature">
+                            <strong>Riverside's Best</strong> — Traditional Taekwondo mastery combined with Olympic-style sparring
+                        </div>
+                    </div>
+                    
+                    <p class="youth-results">See positive changes in focus, fitness, and confidence in as little as 7 days.</p>
+                    
+                    <p class="youth-trial">2-Week Free Trial available for new students.</p>
+                    
+                    <div class="youth-action">
+                        <a href="#programs" class="btn btn-secondary">View Programs</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -61,8 +143,8 @@
             <div class="program-image">
                 <div class="program-overlay"></div>
                 <div class="program-content">
-                    <h3>Kids Taekwondo</h3>
-                    <p>Building confidence and focus</p>
+                    <h3>Adult Taekwondo in Norco</h3>
+                    <p>Our Norco adult martial arts classes are designed to make you stronger from the inside out. As your body transforms, your mindset follows. Discover the ancient secret to modern confidence and peak physical health. Your transformation starts on the mat. Adults training alongside their kids — priceless.</p>
                 </div>
             </div>
         </div>
@@ -70,17 +152,11 @@
             <div class="program-image">
                 <div class="program-overlay"></div>
                 <div class="program-content">
-                    <h3>Teens & Adults</h3>
-                    <p>Traditional forms and techniques</p>
-                </div>
-            </div>
-        </div>
-        <div class="program-item">
-            <div class="program-image">
-                <div class="program-overlay"></div>
-                <div class="program-content">
-                    <h3>Competition Training</h3>
-                    <p>Advanced sparring and technique</p>
+                    <h3>Competition Taekwondo Team in Norco</h3>
+                    <p class="program-subtitle">Olympic-Style Competition Team</p>
+                    <p class="program-description">Take your martial arts journey from the dojang to the podium. Our Competition Team is designed specifically for athletes who want to master the fast-paced, high-scoring world of Olympic Taekwondo in both Kyorugi (Sparring) & Poomsae (Forms).</p>
+                    <p class="program-highlight">Explosive Performance: We focus on the "electronic scoring" era of Taekwondo, emphasizing rapid-fire roundhouse kicks, sophisticated footwork, and the technical precision required to trigger the PSS (Protective Scoring System) in Both Daedo, KPNP & Leda.</p>
+                    <p class="program-closing">Whether you are looking to win your first local tournament or aiming for State, National or International levels, our program provides the roadmap to get there. We don't just teach you how to fight; we teach you the modern techniques in sport taekwondo to win.</p>
                 </div>
             </div>
         </div>
@@ -125,74 +201,46 @@
     <!-- Registration Section -->
     <section id="registration" class="section registration">
         <div class="container">
-            <h2 class="registration-title">Registration</h2>
-            
-            <div class="registration-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Choose Program</h3>
-                        <p>Select the program that fits your student's age and experience level.</p>
-                    </div>
+            <div class="registration-form-container">
+                <div class="registration-offer-header">
+                    <h2 class="offer-title">Get Started Today</h2>
+                    <p class="offer-subtitle">Join Arise Champion Taekwondo</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>View Schedule</h3>
-                        <p>Review class times and find a session that works for your family.</p>
+                
+                <form class="registration-form" id="registrationForm">
+                    <div class="form-group">
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
                     </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Contact / Sign Up</h3>
-                        <p>Complete the form below or contact us directly to get started.</p>
+                    <div class="form-group">
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <input type="email" id="parent-email" name="parent-email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="parent-phone" name="parent-phone" placeholder="Mobile Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="program-interest" name="program-interest" required>
+                            <option value="">Select A Program</option>
+                            <option value="kids">Kids Taekwondo (Ages 7-11)</option>
+                            <option value="teens">Teens Taekwondo (Ages 12-17)</option>
+                            <option value="adult">Adults Taekwondo (Ages 18+)</option>
+                            <option value="competition">Competition Team (Ages 7+)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-registration-cta">
+                        <span class="cta-icon">→</span>
+                        GET STARTED TODAY
+                    </button>
+                    <p class="registration-disclaimer">
+                        By opting in, you agree to receive periodic text messages & emails from Arise Champion Taekwondo. Your information will never be shared. Reply STOP to cancel. Standard rates may apply. View our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.
+                    </p>
+                </form>
             </div>
-
-            <div class="registration-expectations">
-                <p class="expectation-note">Beginner-friendly</p>
-                <p class="expectation-note">No experience required</p>
-                <p class="expectation-note">Trial class available</p>
+            <div class="registration-footer-link">
+                <a href="#">arisechampiontkd.com</a>
             </div>
-
-            <form class="registration-form" id="registrationForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="student-name">Student Name</label>
-                        <input type="text" id="student-name" name="student-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="age">Age</label>
-                        <input type="number" id="age" name="age" min="4" max="99" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="program-interest">Program Interest</label>
-                    <select id="program-interest" name="program-interest" required>
-                        <option value="">Select a program</option>
-                        <option value="beginner">Beginner</option>
-                        <option value="intermediate">Intermediate</option>
-                        <option value="advanced">Advanced</option>
-                    </select>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="parent-email">Email</label>
-                        <input type="email" id="parent-email" name="parent-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="parent-phone">Phone</label>
-                        <input type="tel" id="parent-phone" name="parent-phone" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message (Optional)</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Any questions or specific scheduling needs?"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit Registration</button>
-            </form>
         </div>
     </section>
 
