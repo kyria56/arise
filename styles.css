@@ -670,6 +670,12 @@ body.loading {
         padding: 0 var(--spacing-sm);
     }
 
+    .program-image {
+        height: auto;
+        min-height: auto;
+        padding: var(--spacing-xl) 0;
+    }
+
     .program-content {
         padding: var(--spacing-md) var(--spacing-sm);
     }
