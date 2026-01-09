@@ -53,9 +53,7 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
-                <li><a href="#programs">Programs</a></li>
                 <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#registration">Registration</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -66,17 +64,66 @@
         </div>
     </nav>
 
+    <!-- Registration Section -->
+    <section id="registration" class="section registration">
+        <div class="container">
+            <div class="registration-form-container">
+                <div class="registration-offer-header">
+                    <h2 class="offer-title">Get Started Today</h2>
+                    <p class="offer-subtitle">Join Arise Champion Taekwondo</p>
+                </div>
+                <div class="form-particles">
+                    <div class="form-particle"></div>
+                    <div class="form-particle"></div>
+                    <div class="form-particle"></div>
+                </div>
+                
+                <form class="registration-form" id="registrationForm">
+                    <div class="form-group">
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="parent-email" name="parent-email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="parent-phone" name="parent-phone" placeholder="Mobile Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="program-interest" name="program-interest" required>
+                            <option value="">Select A Program</option>
+                            <option value="kids">Kids Taekwondo (Ages 7-11)</option>
+                            <option value="teens">Teens Taekwondo (Ages 12-17)</option>
+                            <option value="adult">Adults Taekwondo (Ages 18+)</option>
+                            <option value="competition">Competition Team (Ages 7+)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-registration-cta">
+                        <span class="cta-icon">→</span>
+                        GET STARTED TODAY
+                    </button>
+                    <p class="registration-disclaimer">
+                        By opting in, you agree to receive periodic text messages & emails from Arise Champion Taekwondo. Your information will never be shared. Reply STOP to cancel. Standard rates may apply. View our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.
+                    </p>
+                </form>
+            </div>
+            <div class="registration-footer-link">
+                <a href="#">arisechampiontkd.com</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-image">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h2 class="hero-headline">Discipline. Respect. Growth.</h2>
-                <a href="#registration" class="btn btn-primary">Join Us</a>
             </div>
         </div>
     </section>
-
 
     <!-- Academy Intro Section -->
     <section id="about" class="section academy-intro">
@@ -137,31 +184,6 @@
         </div>
     </section>
 
-    <!-- Programs Section -->
-    <section id="programs" class="section programs">
-        <div class="program-item">
-            <div class="program-image">
-                <div class="program-overlay"></div>
-                <div class="program-content">
-                    <h3>Adult Taekwondo in Norco</h3>
-                    <p>Our Norco adult martial arts classes are designed to make you stronger from the inside out. As your body transforms, your mindset follows. Discover the ancient secret to modern confidence and peak physical health. Your transformation starts on the mat. Adults training alongside their kids — priceless.</p>
-                </div>
-            </div>
-        </div>
-        <div class="program-item">
-            <div class="program-image">
-                <div class="program-overlay"></div>
-                <div class="program-content">
-                    <h3>Competition Taekwondo Team in Norco</h3>
-                    <p class="program-subtitle">Olympic-Style Competition Team</p>
-                    <p class="program-description">Take your martial arts journey from the dojang to the podium. Our Competition Team is designed specifically for athletes who want to master the fast-paced, high-scoring world of Olympic Taekwondo in both Kyorugi (Sparring) & Poomsae (Forms).</p>
-                    <p class="program-highlight">Explosive Performance: We focus on the "electronic scoring" era of Taekwondo, emphasizing rapid-fire roundhouse kicks, sophisticated footwork, and the technical precision required to trigger the PSS (Protective Scoring System) in Both Daedo, KPNP & Leda.</p>
-                    <p class="program-closing">Whether you are looking to win your first local tournament or aiming for State, National or International levels, our program provides the roadmap to get there. We don't just teach you how to fight; we teach you the modern techniques in sport taekwondo to win.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Schedule Section -->
     <section id="schedule" class="section schedule">
         <div class="container">
@@ -194,52 +216,6 @@
                         <div class="time-slot">7:10 PM: Sparring - Level 2</div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section id="registration" class="section registration">
-        <div class="container">
-            <div class="registration-form-container">
-                <div class="registration-offer-header">
-                    <h2 class="offer-title">Get Started Today</h2>
-                    <p class="offer-subtitle">Join Arise Champion Taekwondo</p>
-                </div>
-                
-                <form class="registration-form" id="registrationForm">
-                    <div class="form-group">
-                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="parent-email" name="parent-email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="parent-phone" name="parent-phone" placeholder="Mobile Phone" required>
-                    </div>
-                    <div class="form-group">
-                        <select id="program-interest" name="program-interest" required>
-                            <option value="">Select A Program</option>
-                            <option value="kids">Kids Taekwondo (Ages 7-11)</option>
-                            <option value="teens">Teens Taekwondo (Ages 12-17)</option>
-                            <option value="adult">Adults Taekwondo (Ages 18+)</option>
-                            <option value="competition">Competition Team (Ages 7+)</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn-registration-cta">
-                        <span class="cta-icon">→</span>
-                        GET STARTED TODAY
-                    </button>
-                    <p class="registration-disclaimer">
-                        By opting in, you agree to receive periodic text messages & emails from Arise Champion Taekwondo. Your information will never be shared. Reply STOP to cancel. Standard rates may apply. View our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.
-                    </p>
-                </form>
-            </div>
-            <div class="registration-footer-link">
-                <a href="#">arisechampiontkd.com</a>
             </div>
         </div>
     </section>
