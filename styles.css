@@ -597,12 +597,81 @@ body.loading {
     }
 
     .registration {
-        padding: var(--spacing-md) 0;
+        padding: var(--spacing-sm) 0;
+        min-height: auto;
+    }
+
+    .registration-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        padding: 0 var(--spacing-sm);
+    }
+
+    .registration-intro {
+        padding: var(--spacing-xs) 0;
+    }
+
+    .registration-headline {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-sm);
+        line-height: 1.25;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        padding: 0;
+    }
+
+    .registration-headline .highlight-gold {
+        display: inline;
+        word-break: keep-all;
+    }
+
+    .registration-intro-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: var(--spacing-sm);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 0;
+    }
+
+    .registration-results {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        padding: 0;
+        margin: 0;
     }
 
     .registration-form-container {
         margin: 0;
         border-radius: 8px;
+    }
+
+    .offer-title {
+        font-size: 1.375rem;
+        line-height: 1.3;
+        word-wrap: break-word;
+    }
+
+    .offer-subtitle {
+        font-size: 0.95rem;
+        word-wrap: break-word;
+    }
+
+    .offer-trial {
+        font-size: 0.8rem;
+        padding: 0;
+        line-height: 1.4;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .registration-offer-header {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .registration-form {
+        padding: var(--spacing-md) var(--spacing-sm);
     }
 
     .loading-content {
@@ -899,7 +968,7 @@ body.loading {
 .academy-intro-image {
     width: 100%;
     min-height: 60vh;
-    background-image: url('about-bg.jpg');
+    background-image: url('programs-teens-adults-bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -977,7 +1046,7 @@ body.loading {
 .youth-programs-image {
     width: 100%;
     min-height: 70vh;
-    background-image: url('about-bg.jpg');
+    background-image: url('program-kids-bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1081,12 +1150,29 @@ body.loading {
     color: var(--color-text);
     border: 2px solid var(--color-gold);
     font-weight: 500;
+    margin-bottom: var(--spacing-sm);
 }
 
 .btn-secondary:hover {
     background-color: var(--color-gold);
     color: var(--color-primary);
     border-color: var(--color-gold);
+}
+
+.btn-signup {
+    background-color: var(--color-gold);
+    color: var(--color-primary);
+    border: 2px solid var(--color-gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn-signup:hover {
+    background-color: var(--color-gold-light);
+    border-color: var(--color-gold-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
 }
 
 /* About Section */
@@ -1358,24 +1444,13 @@ body.loading {
 
 /* Registration Section */
 .registration {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
-    padding: var(--spacing-lg) 0;
     position: relative;
+    padding: var(--spacing-xl) 0;
+    min-height: 80vh;
     overflow: hidden;
-    animation: bg-shift 10s ease-in-out infinite;
 }
 
-@keyframes bg-shift {
-    0%, 100% {
-        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
-    }
-    50% {
-        background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #2a2a2a 100%);
-    }
-}
-
-.registration::before {
-    content: '';
+.registration-bg-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -1384,29 +1459,16 @@ body.loading {
     background-image: url('about-bg.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.2;
-    filter: blur(15px);
     z-index: 0;
-    animation: bg-move 20s ease-in-out infinite;
 }
 
-@keyframes bg-move {
-    0%, 100% {
-        transform: scale(1) translateX(0);
-    }
-    50% {
-        transform: scale(1.1) translateX(10px);
-    }
-}
-
-.registration::after {
-    content: '';
+.registration-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(42, 42, 42, 0.85) 100%);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -1415,9 +1477,56 @@ body.loading {
     z-index: 2;
 }
 
-.registration-form-container {
-    max-width: 500px;
+.registration-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    box-sizing: border-box;
+}
+
+.registration-intro {
+    color: white;
+    padding: var(--spacing-md) 0;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+.registration-headline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-lg);
+    letter-spacing: 0.02em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.registration-headline .highlight-gold {
+    color: var(--color-gold);
+}
+
+.registration-intro-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.registration-results {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.registration-form-container {
+    max-width: 100%;
     background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
     border-radius: 16px;
     overflow: hidden;
@@ -1528,12 +1637,26 @@ body.loading {
     font-size: 1.1rem;
     font-weight: 600;
     color: white;
-    margin: 0;
+    margin: 0 0 var(--spacing-sm);
     opacity: 0.95;
     letter-spacing: 0.03em;
     position: relative;
     z-index: 1;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.offer-trial {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    opacity: 0.9;
+    letter-spacing: 0.02em;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+    padding: 0 var(--spacing-sm);
 }
 
 .registration-form {
