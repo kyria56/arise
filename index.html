@@ -66,48 +66,58 @@
 
     <!-- Registration Section -->
     <section id="registration" class="section registration">
+        <div class="registration-bg-image"></div>
+        <div class="registration-overlay"></div>
         <div class="container">
-            <div class="registration-form-container">
-                <div class="registration-offer-header">
-                    <h2 class="offer-title">Get Started Today</h2>
-                    <p class="offer-subtitle">Join Arise Champion Taekwondo</p>
+            <div class="registration-content-wrapper">
+                <div class="registration-intro">
+                    <h2 class="registration-headline">#1 Rated Taekwondo School in <span class="highlight-gold">Riverside County</span></h2>
+                    <p class="registration-intro-text">Arise Champion Taekwondo is the #1 rated martial arts school in Riverside County. We're dedicated to transforming lives through traditional Taekwondo excellence, Olympic-style sparring, and unwavering commitment to our students' success. Our experienced instructors guide students of all ages—from kids to adults—in building discipline, confidence, and leadership skills that extend far beyond the mat.</p>
+                    <p class="registration-results">Ranked #1 in Riverside County. Join a community of champions and see why we're the top-rated school in the area.</p>
                 </div>
-                <div class="form-particles">
-                    <div class="form-particle"></div>
-                    <div class="form-particle"></div>
-                    <div class="form-particle"></div>
+                <div class="registration-form-container">
+                    <div class="registration-offer-header">
+                        <h2 class="offer-title">Get Started Today</h2>
+                        <p class="offer-subtitle">Join Arise Champion Taekwondo</p>
+                        <p class="offer-trial">Secure your Free 2 Week FREE Trial and see why we're the #1 rated school in Riverside County!</p>
+                    </div>
+                    <div class="form-particles">
+                        <div class="form-particle"></div>
+                        <div class="form-particle"></div>
+                        <div class="form-particle"></div>
+                    </div>
+                    
+                    <form class="registration-form" id="registrationForm">
+                        <div class="form-group">
+                            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="parent-email" name="parent-email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="parent-phone" name="parent-phone" placeholder="Mobile Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="program-interest" name="program-interest" required>
+                                <option value="">Select A Program</option>
+                                <option value="kids">Kids Taekwondo (Ages 7-11)</option>
+                                <option value="teens">Teens Taekwondo (Ages 12-17)</option>
+                                <option value="adult">Adults Taekwondo (Ages 18+)</option>
+                                <option value="competition">Competition Team (Ages 7+)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-registration-cta">
+                            <span class="cta-icon">→</span>
+                            GET STARTED TODAY
+                        </button>
+                        <p class="registration-disclaimer">
+                            By opting in, you agree to receive periodic text messages & emails from Arise Champion Taekwondo. Your information will never be shared. Reply STOP to cancel. Standard rates may apply. View our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.
+                        </p>
+                    </form>
                 </div>
-                
-                <form class="registration-form" id="registrationForm">
-                    <div class="form-group">
-                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="parent-email" name="parent-email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="parent-phone" name="parent-phone" placeholder="Mobile Phone" required>
-                    </div>
-                    <div class="form-group">
-                        <select id="program-interest" name="program-interest" required>
-                            <option value="">Select A Program</option>
-                            <option value="kids">Kids Taekwondo (Ages 7-11)</option>
-                            <option value="teens">Teens Taekwondo (Ages 12-17)</option>
-                            <option value="adult">Adults Taekwondo (Ages 18+)</option>
-                            <option value="competition">Competition Team (Ages 7+)</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn-registration-cta">
-                        <span class="cta-icon">→</span>
-                        GET STARTED TODAY
-                    </button>
-                    <p class="registration-disclaimer">
-                        By opting in, you agree to receive periodic text messages & emails from Arise Champion Taekwondo. Your information will never be shared. Reply STOP to cancel. Standard rates may apply. View our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a>.
-                    </p>
-                </form>
             </div>
             <div class="registration-footer-link">
                 <a href="#">arisechampiontkd.com</a>
@@ -178,6 +188,7 @@
                     
                     <div class="youth-action">
                         <a href="#programs" class="btn btn-secondary">View Programs</a>
+                        <a href="#registration" class="btn btn-signup">Sign Up</a>
                     </div>
                 </div>
             </div>
