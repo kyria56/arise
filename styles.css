@@ -1483,11 +1483,11 @@ body.loading {
 }
 
 .registration-content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
-    align-items: start;
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: stretch;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
     box-sizing: border-box;
