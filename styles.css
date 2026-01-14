@@ -613,7 +613,12 @@ body.loading {
     }
 
     .registration-intro {
+        order: 0;
         padding: var(--spacing-xs) 0;
+    }
+
+    .registration-form-container {
+        order: 1;
     }
 
     .registration-headline {
@@ -645,11 +650,6 @@ body.loading {
         line-height: 1.5;
         padding: 0;
         margin: 0;
-    }
-
-    .registration-form-container {
-        margin: 0;
-        border-radius: 8px;
     }
 
     .offer-title {
