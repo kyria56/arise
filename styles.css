@@ -597,13 +597,18 @@ body.loading {
     }
 
     .registration {
-        padding: var(--spacing-sm) 0;
+        padding: var(--spacing-xs) 0 var(--spacing-sm);
         min-height: auto;
     }
 
+    .registration-bg-image {
+        background-position: center center;
+    }
+
     .registration-content-wrapper {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
         padding: 0 var(--spacing-sm);
     }
 
