@@ -1507,6 +1507,79 @@ body.loading {
     margin: 0 auto;
 }
 
+/* New Member Guide */
+.new-member {
+    background-color: var(--color-bg-dark);
+    padding: var(--spacing-xl) 0;
+}
+
+.new-member-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.new-member-subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.new-member-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.new-member-card {
+    background-color: var(--color-bg-light);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.new-member-heading {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.new-member-intro {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-sm);
+}
+
+.new-member-card p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.7;
+}
+
+.new-member-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.new-member-list.numbered {
+    list-style: decimal;
+}
+
+.new-member-list li {
+    margin-bottom: 0.35rem;
+}
+
+.new-member-list li strong {
+    color: var(--color-gold);
+}
+
 .schedule-day {
     background-color: var(--color-bg-light);
     padding: var(--spacing-md);
@@ -2059,6 +2132,14 @@ body.loading {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+}
+
+.contact-tagline {
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 1rem;
+    margin: 0 auto var(--spacing-md);
+    max-width: 600px;
 }
 
 .info-item {
