@@ -773,6 +773,54 @@ body.loading {
         text-decoration: underline;
     }
 
+    /* New Member Guide - Mobile */
+    .new-member {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .new-member-title {
+        font-size: 1.6rem;
+        letter-spacing: 0.06em;
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .new-member-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: var(--spacing-md);
+        padding: 0 var(--spacing-sm);
+    }
+
+    .new-member-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .new-member-card {
+        padding: var(--spacing-sm);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .new-member-heading {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .new-member-card p,
+    .new-member-intro {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .new-member-list {
+        padding-left: 1rem;
+        margin-bottom: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+
+    .new-member-list li {
+        margin-bottom: 0.25rem;
+    }
+
     .loading-content {
         padding: var(--spacing-sm);
     }
@@ -793,6 +841,34 @@ body.loading {
 
     .loading-award-large {
         max-width: 250px;
+    }
+
+    /* Global mobile text tweaks */
+    .section .container {
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+    }
+
+    .section p,
+    .section li {
+        text-align: left;
+    }
+
+    .schedule-title,
+    .new-member-title,
+    .contact-title {
+        font-size: 1.6rem;
+        letter-spacing: 0.04em;
+    }
+
+    .academy-intro-content,
+    .youth-programs-content,
+    .new-member-card,
+    .schedule-grid,
+    .contact-info-grid {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .academy-intro-image,
