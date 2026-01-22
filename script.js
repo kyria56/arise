@@ -82,6 +82,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// EmailJS Configuration
+const EMAILJS_PUBLIC_KEY = 'CrCsMkcfiUOEQhyj2';           // Your EmailJS Public Key
+const EMAILJS_SERVICE_ID = 'service_38lcdik';             // Your EmailJS Service ID
+const EMAILJS_TEMPLATE_ID = 'template_k041adj';          // Your EmailJS Template ID
+
+// Initialize EmailJS
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
 // Registration Form Handling
 const registrationForm = document.getElementById('registrationForm');
 if (registrationForm) {
@@ -90,15 +98,48 @@ if (registrationForm) {
         
         // Get form data
         const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
+        const firstName = formData.get('first-name');
+        const lastName = formData.get('last-name');
+        const email = formData.get('parent-email');
+        const phone = formData.get('parent-phone');
+        const program = formData.get('program-interest');
         
-        // In a real implementation, you would send this to a server
-        // For now, we'll just show an alert
-        console.log('Registration submitted:', data);
-        alert('Thank you for your registration! We will contact you soon to confirm your enrollment.');
+        // Combine first and last name
+        const fullName = `${firstName} ${lastName}`;
         
-        // Reset form
-        this.reset();
+        // Get program name from option value
+        const programNames = {
+            'kids': 'Kids Taekwondo (Ages 7-11)',
+            'teens': 'Teens Taekwondo (Ages 12-17)',
+            'adult': 'Adults Taekwondo (Ages 18+)',
+            'competition': 'Competition Team (Ages 7+)'
+        };
+        const programName = programNames[program] || program;
+        
+        // Prepare email template parameters
+        const templateParams = {
+            to_email: 'arisechampiontkd@gmail.com',
+            from_name: fullName,
+            from_email: email,
+            phone: phone,
+            program: programName,
+            message: `New registration from ${fullName}\n\nEmail: ${email}\nPhone: ${phone}\nProgram: ${programName}`
+        };
+        
+        // Send email via EmailJS
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+            .then(function(response) {
+                // Success
+                console.log('Email sent successfully!', response.status, response.text);
+                alert('Thank you for your registration! We will contact you soon to confirm your enrollment.');
+                
+                // Reset form
+                registrationForm.reset();
+            }, function(error) {
+                // Error
+                console.error('Email sending failed:', error);
+                alert('Sorry, there was an error sending your registration. Please try again or contact us directly at arisechampiontkd@gmail.com');
+            });
     });
 }
 
