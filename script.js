@@ -87,8 +87,23 @@ const EMAILJS_PUBLIC_KEY = 'CrCsMkcfiUOEQhyj2';           // Your EmailJS Public
 const EMAILJS_SERVICE_ID = 'service_38lcdik';             // Your EmailJS Service ID
 const EMAILJS_TEMPLATE_ID = 'template_k041adj';          // Your EmailJS Template ID
 
-// Initialize EmailJS
-emailjs.init(EMAILJS_PUBLIC_KEY);
+// Initialize EmailJS when it's loaded
+function initEmailJS() {
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    } else {
+        console.error('EmailJS library not loaded. Check Content Security Policy settings.');
+    }
+}
+
+// Wait for EmailJS to load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEmailJS);
+} else {
+    // If already loaded, try immediately and also after a short delay
+    initEmailJS();
+    setTimeout(initEmailJS, 100);
+}
 
 // Registration Form Handling
 const registrationForm = document.getElementById('registrationForm');
@@ -126,6 +141,13 @@ if (registrationForm) {
             message: `New registration from ${fullName}\n\nEmail: ${email}\nPhone: ${phone}\nProgram: ${programName}`
         };
         
+        // Check if EmailJS is available
+        if (typeof emailjs === 'undefined') {
+            alert('Email service is not available. Please refresh the page and try again, or contact us directly at arisechampiontkd@gmail.com');
+            console.error('EmailJS is not loaded');
+            return;
+        }
+        
         // Send email via EmailJS
         emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
             .then(function(response) {
@@ -138,7 +160,13 @@ if (registrationForm) {
             }, function(error) {
                 // Error
                 console.error('Email sending failed:', error);
-                alert('Sorry, there was an error sending your registration. Please try again or contact us directly at arisechampiontkd@gmail.com');
+                console.error('Error details:', JSON.stringify(error, null, 2));
+                let errorMessage = 'Sorry, there was an error sending your registration. ';
+                if (error.text) {
+                    errorMessage += `Error: ${error.text}. `;
+                }
+                errorMessage += 'Please try again or contact us directly at arisechampiontkd@gmail.com';
+                alert(errorMessage);
             });
     });
 }
