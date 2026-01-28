@@ -107,6 +107,27 @@ if (document.readyState === 'loading') {
 
 // Registration Form Handling
 const registrationForm = document.getElementById('registrationForm');
+const programSelect = document.getElementById('program-interest');
+const registrationSection = document.getElementById('registration');
+
+// Program signup buttons in Programs section
+const programSignupButtons = document.querySelectorAll('.program-signup');
+programSignupButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const programValue = button.getAttribute('data-program');
+        if (programSelect && programValue) {
+            programSelect.value = programValue;
+        }
+        if (registrationSection) {
+            const offsetTop = registrationSection.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
 if (registrationForm) {
     registrationForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -124,7 +145,7 @@ if (registrationForm) {
         
         // Get program name from option value
         const programNames = {
-            'kids': 'Kids Taekwondo (Ages 7-11)',
+            'kids': 'Kids Taekwondo (Ages 4-9)',
             'teens': 'Teens Taekwondo (Ages 12-17)',
             'adult': 'Adults Taekwondo (Ages 18+)',
             'competition': 'Competition Team (Ages 7+)'
