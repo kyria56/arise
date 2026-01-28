@@ -798,6 +798,8 @@ body.loading {
     .new-member-card {
         padding: var(--spacing-sm);
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+        max-width: 420px;
+        margin: 0 auto;
     }
 
     .new-member-heading {
@@ -1606,8 +1608,8 @@ body.loading {
 }
 
 .new-member-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: var(--spacing-lg);
 }
 
@@ -1617,6 +1619,8 @@ body.loading {
     padding: var(--spacing-md);
     border: 1px solid rgba(212, 175, 55, 0.25);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    max-width: 620px;
+    margin: 0 auto;
 }
 
 .new-member-heading {
@@ -1635,6 +1639,7 @@ body.loading {
     color: var(--color-text-light);
     margin-bottom: var(--spacing-sm);
     line-height: 1.7;
+    text-align: left;
 }
 
 .new-member-list {
