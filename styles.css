@@ -873,6 +873,14 @@ body.loading {
         margin-right: auto;
     }
 
+    .contact-info-grid {
+        text-align: center;
+    }
+
+    .info-item {
+        text-align: center;
+    }
+
     .academy-intro-image,
     .youth-programs-image {
         min-height: auto;
