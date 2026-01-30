@@ -145,7 +145,7 @@ if (registrationForm) {
         
         // Get program name from option value
         const programNames = {
-            'kids': 'Kids Taekwondo (Ages 4-9)',
+            'kids': 'Kids Taekwondo (Ages 4-11)',
             'teens': 'Teens Taekwondo (Ages 12-17)',
             'adult': 'Adults Taekwondo (Ages 18+)',
             'competition': 'Competition Team (Ages 7+)'
