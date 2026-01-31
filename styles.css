@@ -2233,6 +2233,7 @@ body.loading {
 
 .info-item {
     padding: var(--spacing-md);
+    text-align: center;
 }
 
 .info-item strong {
@@ -2242,11 +2243,14 @@ body.loading {
     color: var(--color-gold);
     letter-spacing: 0.02em;
     font-size: 1.1rem;
+    text-align: center;
 }
 
 .info-item p {
     color: var(--color-text-light);
     font-size: 1rem;
+    text-align: center;
+    margin: 0;
 }
 
 .form-group {
@@ -2370,7 +2374,22 @@ body.loading {
     }
 
     .contact-info-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .info-item {
+        text-align: center;
+    }
+
+    .info-item strong {
+        text-align: center;
+    }
+
+    .info-item p {
+        text-align: center;
     }
 
     .award-content {
