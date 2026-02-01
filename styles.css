@@ -873,6 +873,13 @@ body.loading {
         margin-right: auto;
     }
 
+    .contact-tagline {
+        text-align: center;
+        margin: 0 auto var(--spacing-md);
+        padding: 0 var(--spacing-sm);
+        display: block;
+    }
+
     .contact-info-grid {
         text-align: center;
     }
